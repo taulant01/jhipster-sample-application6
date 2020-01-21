@@ -1,0 +1,125 @@
+entity Kalkulation{
+  kalkId Integer,
+  version Double,
+  status Status,
+  editing Boolean
+}
+entity KalkulationDetails{
+  a String,
+  b String,
+  c String,
+  d String,
+  e String,
+  f String,
+  g String,
+  h String,
+  i String,
+  j String,
+  k String,
+  l String,
+  m String,
+  n String,
+  o String,
+  p String,
+  q String,
+  r String,
+  s String,
+  t String,
+  u String,
+  v String,
+  w String,
+  x String,
+  y String,
+  z String,
+  aa String,
+  ab String,
+  ac String,
+  ad String,
+  ae String,
+  af String,
+  ag String,
+  
+}
+
+enum Status{
+ IN_PROGRESS,
+ CANCELLED,
+ FINISHED
+}
+
+entity HpeCatalogue{
+    produktNummer String,
+    produktBeschreibung String,
+    kurzeProduktBeschreibung String,
+    produktName String,
+    plBeschreibung String,
+    pl String,
+    land String,
+    wahrung String,
+    incoterm String,
+    preisStatus String,
+    datumPreisanderung String,
+    aktuellerListenPreis String,
+    aktuellerListenpreisGultig String,
+    vorherigerListenpreis String,
+    nettoPreis String,
+    gultigkeitsDatumNettopreis String,
+    vorherigerNettoPreis String,
+    paNachlass String,
+    exhibit String,
+    uom String,
+    preisstaffelVon String,
+    preisstaffelBis String,
+    eoq String,
+    plcStatus String,
+    plcGultigkeitsdatum String,
+    ersatzProdukt String,
+    marketingProgramm String,
+    gewahrleistung String,
+    classDescription String,
+    classCode String,
+    produktFamilienBeschreibung String,
+    produktFamilie String,
+    serienBeschreibung String,
+    seriesCode String,
+    modellBeschreibung String,
+    modell String,
+    standardLieferzeitDistributoren String,
+    volumen String,
+    volumenEinheit String,
+    bruttogewichtProdukts String,
+    gewichtseinheit String,
+    produktabmessungen String,
+    maSeinheit String,
+    eanCode String,
+    serialisierungsKennung String,
+    paNummer String,
+    partnerName String,
+    partnerPro String,
+    datumsUhrzeitstempel String
+}
+
+entity CopAccountDetails{
+	copUser String,
+    copPassword String,
+    copName String
+}
+
+entity AvmUser{
+}
+relationship ManyToOne {
+    Kalkulation{user} to User,
+    
+}
+
+relationship OneToMany{
+	Kalkulation{kalkulationDetails} to KalkulationDetails
+}
+
+relationship OneToOne{
+	AvmUser{copAccountDetails} to CopAccountDetails
+}
+
+paginate HpeCatalogue, Kalkulation, KalkulationDetails, CopAccountDetails with pagination
+
+service all with serviceImpl
