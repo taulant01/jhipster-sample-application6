@@ -1,0 +1,196 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-kalkulation-details-heading" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.home.createOrEditLabel">Create or edit a Kalkulation Details</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.a" for="field_a">A</label>
+                    <input type="text" class="form-control" name="a" id="field_a"
+                           formControlName="a"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.b" for="field_b">B</label>
+                    <input type="text" class="form-control" name="b" id="field_b"
+                           formControlName="b"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.c" for="field_c">C</label>
+                    <input type="text" class="form-control" name="c" id="field_c"
+                           formControlName="c"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.d" for="field_d">D</label>
+                    <input type="text" class="form-control" name="d" id="field_d"
+                           formControlName="d"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.e" for="field_e">E</label>
+                    <input type="text" class="form-control" name="e" id="field_e"
+                           formControlName="e"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.f" for="field_f">F</label>
+                    <input type="text" class="form-control" name="f" id="field_f"
+                           formControlName="f"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.g" for="field_g">G</label>
+                    <input type="text" class="form-control" name="g" id="field_g"
+                           formControlName="g"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.h" for="field_h">H</label>
+                    <input type="text" class="form-control" name="h" id="field_h"
+                           formControlName="h"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.i" for="field_i">I</label>
+                    <input type="text" class="form-control" name="i" id="field_i"
+                           formControlName="i"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.j" for="field_j">J</label>
+                    <input type="text" class="form-control" name="j" id="field_j"
+                           formControlName="j"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.k" for="field_k">K</label>
+                    <input type="text" class="form-control" name="k" id="field_k"
+                           formControlName="k"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.l" for="field_l">L</label>
+                    <input type="text" class="form-control" name="l" id="field_l"
+                           formControlName="l"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.m" for="field_m">M</label>
+                    <input type="text" class="form-control" name="m" id="field_m"
+                           formControlName="m"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.n" for="field_n">N</label>
+                    <input type="text" class="form-control" name="n" id="field_n"
+                           formControlName="n"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.o" for="field_o">O</label>
+                    <input type="text" class="form-control" name="o" id="field_o"
+                           formControlName="o"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.p" for="field_p">P</label>
+                    <input type="text" class="form-control" name="p" id="field_p"
+                           formControlName="p"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.q" for="field_q">Q</label>
+                    <input type="text" class="form-control" name="q" id="field_q"
+                           formControlName="q"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.r" for="field_r">R</label>
+                    <input type="text" class="form-control" name="r" id="field_r"
+                           formControlName="r"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.s" for="field_s">S</label>
+                    <input type="text" class="form-control" name="s" id="field_s"
+                           formControlName="s"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.t" for="field_t">T</label>
+                    <input type="text" class="form-control" name="t" id="field_t"
+                           formControlName="t"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.u" for="field_u">U</label>
+                    <input type="text" class="form-control" name="u" id="field_u"
+                           formControlName="u"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.v" for="field_v">V</label>
+                    <input type="text" class="form-control" name="v" id="field_v"
+                           formControlName="v"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.w" for="field_w">W</label>
+                    <input type="text" class="form-control" name="w" id="field_w"
+                           formControlName="w"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.x" for="field_x">X</label>
+                    <input type="text" class="form-control" name="x" id="field_x"
+                           formControlName="x"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.y" for="field_y">Y</label>
+                    <input type="text" class="form-control" name="y" id="field_y"
+                           formControlName="y"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.z" for="field_z">Z</label>
+                    <input type="text" class="form-control" name="z" id="field_z"
+                           formControlName="z"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.aa" for="field_aa">Aa</label>
+                    <input type="text" class="form-control" name="aa" id="field_aa"
+                           formControlName="aa"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ab" for="field_ab">Ab</label>
+                    <input type="text" class="form-control" name="ab" id="field_ab"
+                           formControlName="ab"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ac" for="field_ac">Ac</label>
+                    <input type="text" class="form-control" name="ac" id="field_ac"
+                           formControlName="ac"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ad" for="field_ad">Ad</label>
+                    <input type="text" class="form-control" name="ad" id="field_ad"
+                           formControlName="ad"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ae" for="field_ae">Ae</label>
+                    <input type="text" class="form-control" name="ae" id="field_ae"
+                           formControlName="ae"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.af" for="field_af">Af</label>
+                    <input type="text" class="form-control" name="af" id="field_af"
+                           formControlName="af"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ag" for="field_ag">Ag</label>
+                    <input type="text" class="form-control" name="ag" id="field_ag"
+                           formControlName="ag"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.kalkulation" for="field_kalkulation">Kalkulation</label>
+                    <select class="form-control" id="field_kalkulation" name="kalkulation" formControlName="kalkulation">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="kalkulationOption.id === editForm.get('kalkulation')!.value?.id ? editForm.get('kalkulation')!.value : kalkulationOption" *ngFor="let kalkulationOption of kalkulations; trackBy: trackById">{{kalkulationOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,219 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="hpeCatalogue">
+            <h2><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.detail.title">Hpe Catalogue</span> {{hpeCatalogue.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktNummer">Produkt Nummer</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.produktNummer}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktBeschreibung">Produkt Beschreibung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.produktBeschreibung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.kurzeProduktBeschreibung">Kurze Produkt Beschreibung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.kurzeProduktBeschreibung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktName">Produkt Name</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.produktName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plBeschreibung">Pl Beschreibung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.plBeschreibung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.pl">Pl</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.pl}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.land">Land</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.land}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.wahrung">Wahrung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.wahrung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.incoterm">Incoterm</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.incoterm}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisStatus">Preis Status</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.preisStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.datumPreisanderung">Datum Preisanderung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.datumPreisanderung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.aktuellerListenPreis">Aktueller Listen Preis</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.aktuellerListenPreis}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.aktuellerListenpreisGultig">Aktueller Listenpreis Gultig</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.aktuellerListenpreisGultig}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.vorherigerListenpreis">Vorheriger Listenpreis</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.vorherigerListenpreis}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.nettoPreis">Netto Preis</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.nettoPreis}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gultigkeitsDatumNettopreis">Gultigkeits Datum Nettopreis</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.gultigkeitsDatumNettopreis}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.vorherigerNettoPreis">Vorheriger Netto Preis</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.vorherigerNettoPreis}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.paNachlass">Pa Nachlass</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.paNachlass}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.exhibit">Exhibit</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.exhibit}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.uom">Uom</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.uom}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisstaffelVon">Preisstaffel Von</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.preisstaffelVon}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisstaffelBis">Preisstaffel Bis</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.preisstaffelBis}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.eoq">Eoq</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.eoq}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plcStatus">Plc Status</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.plcStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plcGultigkeitsdatum">Plc Gultigkeitsdatum</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.plcGultigkeitsdatum}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.ersatzProdukt">Ersatz Produkt</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.ersatzProdukt}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.marketingProgramm">Marketing Programm</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.marketingProgramm}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gewahrleistung">Gewahrleistung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.gewahrleistung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.classDescription">Class Description</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.classDescription}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.classCode">Class Code</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.classCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktFamilienBeschreibung">Produkt Familien Beschreibung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.produktFamilienBeschreibung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktFamilie">Produkt Familie</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.produktFamilie}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.serienBeschreibung">Serien Beschreibung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.serienBeschreibung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.seriesCode">Series Code</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.seriesCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.modellBeschreibung">Modell Beschreibung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.modellBeschreibung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.modell">Modell</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.modell}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.standardLieferzeitDistributoren">Standard Lieferzeit Distributoren</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.standardLieferzeitDistributoren}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.volumen">Volumen</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.volumen}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.volumenEinheit">Volumen Einheit</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.volumenEinheit}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.bruttogewichtProdukts">Bruttogewicht Produkts</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.bruttogewichtProdukts}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gewichtseinheit">Gewichtseinheit</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.gewichtseinheit}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktabmessungen">Produktabmessungen</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.produktabmessungen}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.maSeinheit">Ma Seinheit</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.maSeinheit}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.eanCode">Ean Code</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.eanCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.serialisierungsKennung">Serialisierungs Kennung</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.serialisierungsKennung}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.paNummer">Pa Nummer</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.paNummer}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.partnerName">Partner Name</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.partnerName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.partnerPro">Partner Pro</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.partnerPro}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.datumsUhrzeitstempel">Datums Uhrzeitstempel</span></dt>
+                <dd>
+                    <span>{{hpeCatalogue.datumsUhrzeitstempel}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/hpe-catalogue', hpeCatalogue.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

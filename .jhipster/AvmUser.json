@@ -1,0 +1,24 @@
+{
+    "name": "AvmUser",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "copAccountDetails",
+            "otherEntityRelationshipName": "avmUser",
+            "relationshipName": "copAccountDetails",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200121143316",
+    "entityTableName": "avm_user",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

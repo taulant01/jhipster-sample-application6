@@ -1,0 +1,212 @@
+{
+    "name": "HpeCatalogue",
+    "fields": [
+        {
+            "fieldName": "produktNummer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produktBeschreibung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kurzeProduktBeschreibung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produktName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plBeschreibung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "land",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "wahrung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "incoterm",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "preisStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "datumPreisanderung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aktuellerListenPreis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aktuellerListenpreisGultig",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vorherigerListenpreis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nettoPreis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gultigkeitsDatumNettopreis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vorherigerNettoPreis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paNachlass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "exhibit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "uom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "preisstaffelVon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "preisstaffelBis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eoq",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plcStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plcGultigkeitsdatum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ersatzProdukt",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "marketingProgramm",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gewahrleistung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "classDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "classCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produktFamilienBeschreibung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produktFamilie",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serienBeschreibung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "seriesCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modellBeschreibung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modell",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "standardLieferzeitDistributoren",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volumen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volumenEinheit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bruttogewichtProdukts",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gewichtseinheit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "produktabmessungen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maSeinheit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eanCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serialisierungsKennung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paNummer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partnerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "partnerPro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "datumsUhrzeitstempel",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200121143314",
+    "entityTableName": "hpe_catalogue",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
