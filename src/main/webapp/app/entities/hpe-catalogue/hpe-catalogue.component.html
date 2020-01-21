@@ -1,0 +1,159 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.home.title">Hpe Catalogues</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-hpe-catalogue" [routerLink]="['/hpe-catalogue/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.home.createLabel">
+            Create a new Hpe Catalogue
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="hpeCatalogues?.length === 0">
+        <span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.home.notFound">No hpeCatalogues found</span>
+    </div>
+    <div class="table-responsive" *ngIf="hpeCatalogues?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+            <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="produktNummer"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktNummer">Produkt Nummer</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="produktBeschreibung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktBeschreibung">Produkt Beschreibung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="kurzeProduktBeschreibung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.kurzeProduktBeschreibung">Kurze Produkt Beschreibung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="produktName"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktName">Produkt Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="plBeschreibung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plBeschreibung">Pl Beschreibung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="pl"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.pl">Pl</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="land"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.land">Land</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="wahrung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.wahrung">Wahrung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="incoterm"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.incoterm">Incoterm</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="preisStatus"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisStatus">Preis Status</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="datumPreisanderung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.datumPreisanderung">Datum Preisanderung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="aktuellerListenPreis"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.aktuellerListenPreis">Aktueller Listen Preis</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="aktuellerListenpreisGultig"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.aktuellerListenpreisGultig">Aktueller Listenpreis Gultig</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="vorherigerListenpreis"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.vorherigerListenpreis">Vorheriger Listenpreis</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="nettoPreis"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.nettoPreis">Netto Preis</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="gultigkeitsDatumNettopreis"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gultigkeitsDatumNettopreis">Gultigkeits Datum Nettopreis</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="vorherigerNettoPreis"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.vorherigerNettoPreis">Vorheriger Netto Preis</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="paNachlass"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.paNachlass">Pa Nachlass</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="exhibit"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.exhibit">Exhibit</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="uom"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.uom">Uom</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="preisstaffelVon"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisstaffelVon">Preisstaffel Von</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="preisstaffelBis"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisstaffelBis">Preisstaffel Bis</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="eoq"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.eoq">Eoq</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="plcStatus"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plcStatus">Plc Status</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="plcGultigkeitsdatum"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plcGultigkeitsdatum">Plc Gultigkeitsdatum</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ersatzProdukt"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.ersatzProdukt">Ersatz Produkt</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="marketingProgramm"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.marketingProgramm">Marketing Programm</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="gewahrleistung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gewahrleistung">Gewahrleistung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="classDescription"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.classDescription">Class Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="classCode"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.classCode">Class Code</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="produktFamilienBeschreibung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktFamilienBeschreibung">Produkt Familien Beschreibung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="produktFamilie"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktFamilie">Produkt Familie</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="serienBeschreibung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.serienBeschreibung">Serien Beschreibung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="seriesCode"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.seriesCode">Series Code</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="modellBeschreibung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.modellBeschreibung">Modell Beschreibung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="modell"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.modell">Modell</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="standardLieferzeitDistributoren"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.standardLieferzeitDistributoren">Standard Lieferzeit Distributoren</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="volumen"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.volumen">Volumen</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="volumenEinheit"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.volumenEinheit">Volumen Einheit</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="bruttogewichtProdukts"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.bruttogewichtProdukts">Bruttogewicht Produkts</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="gewichtseinheit"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gewichtseinheit">Gewichtseinheit</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="produktabmessungen"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktabmessungen">Produktabmessungen</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="maSeinheit"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.maSeinheit">Ma Seinheit</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="eanCode"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.eanCode">Ean Code</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="serialisierungsKennung"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.serialisierungsKennung">Serialisierungs Kennung</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="paNummer"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.paNummer">Pa Nummer</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="partnerName"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.partnerName">Partner Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="partnerPro"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.partnerPro">Partner Pro</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="datumsUhrzeitstempel"><span jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.datumsUhrzeitstempel">Datums Uhrzeitstempel</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hpeCatalogue of hpeCatalogues ;trackBy: trackId">
+                <td><a [routerLink]="['/hpe-catalogue', hpeCatalogue.id, 'view' ]">{{hpeCatalogue.id}}</a></td>
+                <td>{{hpeCatalogue.produktNummer}}</td>
+                <td>{{hpeCatalogue.produktBeschreibung}}</td>
+                <td>{{hpeCatalogue.kurzeProduktBeschreibung}}</td>
+                <td>{{hpeCatalogue.produktName}}</td>
+                <td>{{hpeCatalogue.plBeschreibung}}</td>
+                <td>{{hpeCatalogue.pl}}</td>
+                <td>{{hpeCatalogue.land}}</td>
+                <td>{{hpeCatalogue.wahrung}}</td>
+                <td>{{hpeCatalogue.incoterm}}</td>
+                <td>{{hpeCatalogue.preisStatus}}</td>
+                <td>{{hpeCatalogue.datumPreisanderung}}</td>
+                <td>{{hpeCatalogue.aktuellerListenPreis}}</td>
+                <td>{{hpeCatalogue.aktuellerListenpreisGultig}}</td>
+                <td>{{hpeCatalogue.vorherigerListenpreis}}</td>
+                <td>{{hpeCatalogue.nettoPreis}}</td>
+                <td>{{hpeCatalogue.gultigkeitsDatumNettopreis}}</td>
+                <td>{{hpeCatalogue.vorherigerNettoPreis}}</td>
+                <td>{{hpeCatalogue.paNachlass}}</td>
+                <td>{{hpeCatalogue.exhibit}}</td>
+                <td>{{hpeCatalogue.uom}}</td>
+                <td>{{hpeCatalogue.preisstaffelVon}}</td>
+                <td>{{hpeCatalogue.preisstaffelBis}}</td>
+                <td>{{hpeCatalogue.eoq}}</td>
+                <td>{{hpeCatalogue.plcStatus}}</td>
+                <td>{{hpeCatalogue.plcGultigkeitsdatum}}</td>
+                <td>{{hpeCatalogue.ersatzProdukt}}</td>
+                <td>{{hpeCatalogue.marketingProgramm}}</td>
+                <td>{{hpeCatalogue.gewahrleistung}}</td>
+                <td>{{hpeCatalogue.classDescription}}</td>
+                <td>{{hpeCatalogue.classCode}}</td>
+                <td>{{hpeCatalogue.produktFamilienBeschreibung}}</td>
+                <td>{{hpeCatalogue.produktFamilie}}</td>
+                <td>{{hpeCatalogue.serienBeschreibung}}</td>
+                <td>{{hpeCatalogue.seriesCode}}</td>
+                <td>{{hpeCatalogue.modellBeschreibung}}</td>
+                <td>{{hpeCatalogue.modell}}</td>
+                <td>{{hpeCatalogue.standardLieferzeitDistributoren}}</td>
+                <td>{{hpeCatalogue.volumen}}</td>
+                <td>{{hpeCatalogue.volumenEinheit}}</td>
+                <td>{{hpeCatalogue.bruttogewichtProdukts}}</td>
+                <td>{{hpeCatalogue.gewichtseinheit}}</td>
+                <td>{{hpeCatalogue.produktabmessungen}}</td>
+                <td>{{hpeCatalogue.maSeinheit}}</td>
+                <td>{{hpeCatalogue.eanCode}}</td>
+                <td>{{hpeCatalogue.serialisierungsKennung}}</td>
+                <td>{{hpeCatalogue.paNummer}}</td>
+                <td>{{hpeCatalogue.partnerName}}</td>
+                <td>{{hpeCatalogue.partnerPro}}</td>
+                <td>{{hpeCatalogue.datumsUhrzeitstempel}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/hpe-catalogue', hpeCatalogue.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/hpe-catalogue', hpeCatalogue.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(hpeCatalogue)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="hpeCatalogues?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

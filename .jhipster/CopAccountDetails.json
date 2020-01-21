@@ -1,0 +1,28 @@
+{
+    "name": "CopAccountDetails",
+    "fields": [
+        {
+            "fieldName": "copUser",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "copPassword",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "copName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200121135852",
+    "entityTableName": "cop_account_details",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

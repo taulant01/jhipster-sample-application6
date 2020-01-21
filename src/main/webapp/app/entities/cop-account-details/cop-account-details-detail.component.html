@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="copAccountDetails">
+            <h2><span jhiTranslate="jhipsterSampleApplication55App.copAccountDetails.detail.title">Cop Account Details</span> {{copAccountDetails.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.copAccountDetails.copUser">Cop User</span></dt>
+                <dd>
+                    <span>{{copAccountDetails.copUser}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.copAccountDetails.copPassword">Cop Password</span></dt>
+                <dd>
+                    <span>{{copAccountDetails.copPassword}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.copAccountDetails.copName">Cop Name</span></dt>
+                <dd>
+                    <span>{{copAccountDetails.copName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cop-account-details', copAccountDetails.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
