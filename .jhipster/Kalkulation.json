@@ -1,0 +1,47 @@
+{
+    "name": "Kalkulation",
+    "fields": [
+        {
+            "fieldName": "kalkId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "version",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "IN_PROGRESS,CANCELLED,FINISHED"
+        },
+        {
+            "fieldName": "editing",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "kalkulationDetails",
+            "otherEntityRelationshipName": "kalkulation",
+            "relationshipName": "kalkulationDetails"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "kalkulation",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200121135849",
+    "entityTableName": "kalkulation",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

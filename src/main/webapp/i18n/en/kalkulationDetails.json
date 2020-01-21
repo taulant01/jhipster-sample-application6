@@ -1,0 +1,55 @@
+{
+  "jhipsterSampleApplication55App": {
+    "kalkulationDetails": {
+      "home": {
+        "title": "Kalkulation Details",
+        "createLabel": "Create a new Kalkulation Details",
+        "createOrEditLabel": "Create or edit a Kalkulation Details",
+        "notFound": "No Kalkulation Details found"
+      },
+      "created": "A new Kalkulation Details is created with identifier {{ param }}",
+      "updated": "A Kalkulation Details is updated with identifier {{ param }}",
+      "deleted": "A Kalkulation Details is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Kalkulation Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Kalkulation Details"
+      },
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D",
+      "e": "E",
+      "f": "F",
+      "g": "G",
+      "h": "H",
+      "i": "I",
+      "j": "J",
+      "k": "K",
+      "l": "L",
+      "m": "M",
+      "n": "N",
+      "o": "O",
+      "p": "P",
+      "q": "Q",
+      "r": "R",
+      "s": "S",
+      "t": "T",
+      "u": "U",
+      "v": "V",
+      "w": "W",
+      "x": "X",
+      "y": "Y",
+      "z": "Z",
+      "aa": "Aa",
+      "ab": "Ab",
+      "ac": "Ac",
+      "ad": "Ad",
+      "ae": "Ae",
+      "af": "Af",
+      "ag": "Ag",
+      "kalkulation": "Kalkulation"
+    }
+  }
+}

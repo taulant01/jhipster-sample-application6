@@ -1,0 +1,133 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.home.title">Kalkulation Details</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-kalkulation-details" [routerLink]="['/kalkulation-details/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.home.createLabel">
+            Create a new Kalkulation Details
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="kalkulationDetails?.length === 0">
+        <span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.home.notFound">No kalkulationDetails found</span>
+    </div>
+    <div class="table-responsive" *ngIf="kalkulationDetails?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+            <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="a"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.a">A</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="b"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.b">B</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="c"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.c">C</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="d"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.d">D</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="e"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.e">E</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="f"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.f">F</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="g"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.g">G</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="h"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.h">H</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="i"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.i">I</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="j"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.j">J</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="k"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.k">K</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="l"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.l">L</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="m"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.m">M</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="n"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.n">N</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="o"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.o">O</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="p"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.p">P</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="q"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.q">Q</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="r"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.r">R</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="s"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.s">S</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="t"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.t">T</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="u"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.u">U</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="v"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.v">V</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="w"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.w">W</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="x"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.x">X</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="y"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.y">Y</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="z"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.z">Z</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="aa"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.aa">Aa</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ab"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ab">Ab</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ac"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ac">Ac</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ad"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ad">Ad</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ae"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ae">Ae</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="af"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.af">Af</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ag"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.ag">Ag</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="kalkulation.id"><span jhiTranslate="jhipsterSampleApplication55App.kalkulationDetails.kalkulation">Kalkulation</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let kalkulationDetails of kalkulationDetails ;trackBy: trackId">
+                <td><a [routerLink]="['/kalkulation-details', kalkulationDetails.id, 'view' ]">{{kalkulationDetails.id}}</a></td>
+                <td>{{kalkulationDetails.a}}</td>
+                <td>{{kalkulationDetails.b}}</td>
+                <td>{{kalkulationDetails.c}}</td>
+                <td>{{kalkulationDetails.d}}</td>
+                <td>{{kalkulationDetails.e}}</td>
+                <td>{{kalkulationDetails.f}}</td>
+                <td>{{kalkulationDetails.g}}</td>
+                <td>{{kalkulationDetails.h}}</td>
+                <td>{{kalkulationDetails.i}}</td>
+                <td>{{kalkulationDetails.j}}</td>
+                <td>{{kalkulationDetails.k}}</td>
+                <td>{{kalkulationDetails.l}}</td>
+                <td>{{kalkulationDetails.m}}</td>
+                <td>{{kalkulationDetails.n}}</td>
+                <td>{{kalkulationDetails.o}}</td>
+                <td>{{kalkulationDetails.p}}</td>
+                <td>{{kalkulationDetails.q}}</td>
+                <td>{{kalkulationDetails.r}}</td>
+                <td>{{kalkulationDetails.s}}</td>
+                <td>{{kalkulationDetails.t}}</td>
+                <td>{{kalkulationDetails.u}}</td>
+                <td>{{kalkulationDetails.v}}</td>
+                <td>{{kalkulationDetails.w}}</td>
+                <td>{{kalkulationDetails.x}}</td>
+                <td>{{kalkulationDetails.y}}</td>
+                <td>{{kalkulationDetails.z}}</td>
+                <td>{{kalkulationDetails.aa}}</td>
+                <td>{{kalkulationDetails.ab}}</td>
+                <td>{{kalkulationDetails.ac}}</td>
+                <td>{{kalkulationDetails.ad}}</td>
+                <td>{{kalkulationDetails.ae}}</td>
+                <td>{{kalkulationDetails.af}}</td>
+                <td>{{kalkulationDetails.ag}}</td>
+                <td>
+                    <div *ngIf="kalkulationDetails.kalkulation">
+                        <a [routerLink]="['/kalkulation', kalkulationDetails.kalkulation?.id, 'view' ]" >{{kalkulationDetails.kalkulation?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/kalkulation-details', kalkulationDetails.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/kalkulation-details', kalkulationDetails.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(kalkulationDetails)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="kalkulationDetails?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

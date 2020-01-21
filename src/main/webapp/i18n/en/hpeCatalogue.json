@@ -1,0 +1,70 @@
+{
+  "jhipsterSampleApplication55App": {
+    "hpeCatalogue": {
+      "home": {
+        "title": "Hpe Catalogues",
+        "createLabel": "Create a new Hpe Catalogue",
+        "createOrEditLabel": "Create or edit a Hpe Catalogue",
+        "notFound": "No Hpe Catalogues found"
+      },
+      "created": "A new Hpe Catalogue is created with identifier {{ param }}",
+      "updated": "A Hpe Catalogue is updated with identifier {{ param }}",
+      "deleted": "A Hpe Catalogue is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Hpe Catalogue {{ id }}?"
+      },
+      "detail": {
+        "title": "Hpe Catalogue"
+      },
+      "produktNummer": "Produkt Nummer",
+      "produktBeschreibung": "Produkt Beschreibung",
+      "kurzeProduktBeschreibung": "Kurze Produkt Beschreibung",
+      "produktName": "Produkt Name",
+      "plBeschreibung": "Pl Beschreibung",
+      "pl": "Pl",
+      "land": "Land",
+      "wahrung": "Wahrung",
+      "incoterm": "Incoterm",
+      "preisStatus": "Preis Status",
+      "datumPreisanderung": "Datum Preisanderung",
+      "aktuellerListenPreis": "Aktueller Listen Preis",
+      "aktuellerListenpreisGultig": "Aktueller Listenpreis Gultig",
+      "vorherigerListenpreis": "Vorheriger Listenpreis",
+      "nettoPreis": "Netto Preis",
+      "gultigkeitsDatumNettopreis": "Gultigkeits Datum Nettopreis",
+      "vorherigerNettoPreis": "Vorheriger Netto Preis",
+      "paNachlass": "Pa Nachlass",
+      "exhibit": "Exhibit",
+      "uom": "Uom",
+      "preisstaffelVon": "Preisstaffel Von",
+      "preisstaffelBis": "Preisstaffel Bis",
+      "eoq": "Eoq",
+      "plcStatus": "Plc Status",
+      "plcGultigkeitsdatum": "Plc Gultigkeitsdatum",
+      "ersatzProdukt": "Ersatz Produkt",
+      "marketingProgramm": "Marketing Programm",
+      "gewahrleistung": "Gewahrleistung",
+      "classDescription": "Class Description",
+      "classCode": "Class Code",
+      "produktFamilienBeschreibung": "Produkt Familien Beschreibung",
+      "produktFamilie": "Produkt Familie",
+      "serienBeschreibung": "Serien Beschreibung",
+      "seriesCode": "Series Code",
+      "modellBeschreibung": "Modell Beschreibung",
+      "modell": "Modell",
+      "standardLieferzeitDistributoren": "Standard Lieferzeit Distributoren",
+      "volumen": "Volumen",
+      "volumenEinheit": "Volumen Einheit",
+      "bruttogewichtProdukts": "Bruttogewicht Produkts",
+      "gewichtseinheit": "Gewichtseinheit",
+      "produktabmessungen": "Produktabmessungen",
+      "maSeinheit": "Ma Seinheit",
+      "eanCode": "Ean Code",
+      "serialisierungsKennung": "Serialisierungs Kennung",
+      "paNummer": "Pa Nummer",
+      "partnerName": "Partner Name",
+      "partnerPro": "Partner Pro",
+      "datumsUhrzeitstempel": "Datums Uhrzeitstempel"
+    }
+  }
+}

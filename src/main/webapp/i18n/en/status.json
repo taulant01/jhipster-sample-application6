@@ -1,0 +1,10 @@
+{
+  "jhipsterSampleApplication55App": {
+    "Status": {
+      "null": "",
+      "IN_PROGRESS": "IN_PROGRESS",
+      "CANCELLED": "CANCELLED",
+      "FINISHED": "FINISHED"
+    }
+  }
+}

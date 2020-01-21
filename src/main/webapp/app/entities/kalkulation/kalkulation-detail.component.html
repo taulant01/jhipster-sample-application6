@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="kalkulation">
+            <h2><span jhiTranslate="jhipsterSampleApplication55App.kalkulation.detail.title">Kalkulation</span> {{kalkulation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.kalkulation.kalkId">Kalk Id</span></dt>
+                <dd>
+                    <span>{{kalkulation.kalkId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.kalkulation.version">Version</span></dt>
+                <dd>
+                    <span>{{kalkulation.version}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.kalkulation.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'jhipsterSampleApplication55App.Status.' + kalkulation.status}}">{{kalkulation.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.kalkulation.editing">Editing</span></dt>
+                <dd>
+                    <span>{{kalkulation.editing}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplication55App.kalkulation.user">User</span></dt>
+                <dd>
+                    {{kalkulation.user?.id}}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/kalkulation', kalkulation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

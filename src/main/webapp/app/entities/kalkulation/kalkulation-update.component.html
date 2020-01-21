@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-kalkulation-heading" jhiTranslate="jhipsterSampleApplication55App.kalkulation.home.createOrEditLabel">Create or edit a Kalkulation</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulation.kalkId" for="field_kalkId">Kalk Id</label>
+                    <input type="number" class="form-control" name="kalkId" id="field_kalkId"
+                           formControlName="kalkId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulation.version" for="field_version">Version</label>
+                    <input type="number" class="form-control" name="version" id="field_version"
+                           formControlName="version"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulation.status" for="field_status">Status</label>
+                    <select class="form-control" name="status" formControlName="status" id="field_status">
+                        <option value="IN_PROGRESS">{{'jhipsterSampleApplication55App.Status.IN_PROGRESS' | translate}}</option>
+                        <option value="CANCELLED">{{'jhipsterSampleApplication55App.Status.CANCELLED' | translate}}</option>
+                        <option value="FINISHED">{{'jhipsterSampleApplication55App.Status.FINISHED' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulation.editing" for="field_editing">Editing</label>
+                    <input type="checkbox" class="form-control" name="editing" id="field_editing"
+                           formControlName="editing"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.kalkulation.user" for="field_user">User</label>
+                    <select class="form-control" id="field_user" name="user" formControlName="user">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userOption.id === editForm.get('user')!.value?.id ? editForm.get('user')!.value : userOption" *ngFor="let userOption of users; trackBy: trackById">{{userOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

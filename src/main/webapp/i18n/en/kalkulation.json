@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplication55App": {
+    "kalkulation": {
+      "home": {
+        "title": "Kalkulations",
+        "createLabel": "Create a new Kalkulation",
+        "createOrEditLabel": "Create or edit a Kalkulation",
+        "notFound": "No Kalkulations found"
+      },
+      "created": "A new Kalkulation is created with identifier {{ param }}",
+      "updated": "A Kalkulation is updated with identifier {{ param }}",
+      "deleted": "A Kalkulation is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Kalkulation {{ id }}?"
+      },
+      "detail": {
+        "title": "Kalkulation"
+      },
+      "kalkId": "Kalk Id",
+      "version": "Version",
+      "status": "Status",
+      "editing": "Editing",
+      "kalkulationDetails": "Kalkulation Details",
+      "user": "User"
+    }
+  }
+}
