@@ -1,0 +1,156 @@
+{
+    "name": "KalkulationDetails",
+    "fields": [
+        {
+            "fieldName": "a",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "b",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "c",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "d",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "e",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "f",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "g",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "h",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "j",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "k",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "l",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "m",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "n",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "o",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "p",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "q",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "s",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "t",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "u",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "v",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "w",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "x",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "y",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "z",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ab",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ac",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ae",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "af",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ag",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "kalkulation",
+            "otherEntityRelationshipName": "kalkulationDetails",
+            "relationshipName": "kalkulation",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200121143313",
+    "entityTableName": "kalkulation_details",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

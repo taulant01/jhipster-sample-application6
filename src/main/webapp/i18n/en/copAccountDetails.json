@@ -1,0 +1,24 @@
+{
+  "jhipsterSampleApplication55App": {
+    "copAccountDetails": {
+      "home": {
+        "title": "Cop Account Details",
+        "createLabel": "Create a new Cop Account Details",
+        "createOrEditLabel": "Create or edit a Cop Account Details",
+        "notFound": "No Cop Account Details found"
+      },
+      "created": "A new Cop Account Details is created with identifier {{ param }}",
+      "updated": "A Cop Account Details is updated with identifier {{ param }}",
+      "deleted": "A Cop Account Details is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cop Account Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Cop Account Details"
+      },
+      "copUser": "Cop User",
+      "copPassword": "Cop Password",
+      "copName": "Cop Name"
+    }
+  }
+}

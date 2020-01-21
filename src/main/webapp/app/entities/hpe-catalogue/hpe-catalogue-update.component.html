@@ -1,0 +1,269 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-hpe-catalogue-heading" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.home.createOrEditLabel">Create or edit a Hpe Catalogue</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktNummer" for="field_produktNummer">Produkt Nummer</label>
+                    <input type="text" class="form-control" name="produktNummer" id="field_produktNummer"
+                           formControlName="produktNummer"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktBeschreibung" for="field_produktBeschreibung">Produkt Beschreibung</label>
+                    <input type="text" class="form-control" name="produktBeschreibung" id="field_produktBeschreibung"
+                           formControlName="produktBeschreibung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.kurzeProduktBeschreibung" for="field_kurzeProduktBeschreibung">Kurze Produkt Beschreibung</label>
+                    <input type="text" class="form-control" name="kurzeProduktBeschreibung" id="field_kurzeProduktBeschreibung"
+                           formControlName="kurzeProduktBeschreibung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktName" for="field_produktName">Produkt Name</label>
+                    <input type="text" class="form-control" name="produktName" id="field_produktName"
+                           formControlName="produktName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plBeschreibung" for="field_plBeschreibung">Pl Beschreibung</label>
+                    <input type="text" class="form-control" name="plBeschreibung" id="field_plBeschreibung"
+                           formControlName="plBeschreibung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.pl" for="field_pl">Pl</label>
+                    <input type="text" class="form-control" name="pl" id="field_pl"
+                           formControlName="pl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.land" for="field_land">Land</label>
+                    <input type="text" class="form-control" name="land" id="field_land"
+                           formControlName="land"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.wahrung" for="field_wahrung">Wahrung</label>
+                    <input type="text" class="form-control" name="wahrung" id="field_wahrung"
+                           formControlName="wahrung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.incoterm" for="field_incoterm">Incoterm</label>
+                    <input type="text" class="form-control" name="incoterm" id="field_incoterm"
+                           formControlName="incoterm"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisStatus" for="field_preisStatus">Preis Status</label>
+                    <input type="text" class="form-control" name="preisStatus" id="field_preisStatus"
+                           formControlName="preisStatus"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.datumPreisanderung" for="field_datumPreisanderung">Datum Preisanderung</label>
+                    <input type="text" class="form-control" name="datumPreisanderung" id="field_datumPreisanderung"
+                           formControlName="datumPreisanderung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.aktuellerListenPreis" for="field_aktuellerListenPreis">Aktueller Listen Preis</label>
+                    <input type="text" class="form-control" name="aktuellerListenPreis" id="field_aktuellerListenPreis"
+                           formControlName="aktuellerListenPreis"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.aktuellerListenpreisGultig" for="field_aktuellerListenpreisGultig">Aktueller Listenpreis Gultig</label>
+                    <input type="text" class="form-control" name="aktuellerListenpreisGultig" id="field_aktuellerListenpreisGultig"
+                           formControlName="aktuellerListenpreisGultig"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.vorherigerListenpreis" for="field_vorherigerListenpreis">Vorheriger Listenpreis</label>
+                    <input type="text" class="form-control" name="vorherigerListenpreis" id="field_vorherigerListenpreis"
+                           formControlName="vorherigerListenpreis"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.nettoPreis" for="field_nettoPreis">Netto Preis</label>
+                    <input type="text" class="form-control" name="nettoPreis" id="field_nettoPreis"
+                           formControlName="nettoPreis"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gultigkeitsDatumNettopreis" for="field_gultigkeitsDatumNettopreis">Gultigkeits Datum Nettopreis</label>
+                    <input type="text" class="form-control" name="gultigkeitsDatumNettopreis" id="field_gultigkeitsDatumNettopreis"
+                           formControlName="gultigkeitsDatumNettopreis"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.vorherigerNettoPreis" for="field_vorherigerNettoPreis">Vorheriger Netto Preis</label>
+                    <input type="text" class="form-control" name="vorherigerNettoPreis" id="field_vorherigerNettoPreis"
+                           formControlName="vorherigerNettoPreis"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.paNachlass" for="field_paNachlass">Pa Nachlass</label>
+                    <input type="text" class="form-control" name="paNachlass" id="field_paNachlass"
+                           formControlName="paNachlass"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.exhibit" for="field_exhibit">Exhibit</label>
+                    <input type="text" class="form-control" name="exhibit" id="field_exhibit"
+                           formControlName="exhibit"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.uom" for="field_uom">Uom</label>
+                    <input type="text" class="form-control" name="uom" id="field_uom"
+                           formControlName="uom"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisstaffelVon" for="field_preisstaffelVon">Preisstaffel Von</label>
+                    <input type="text" class="form-control" name="preisstaffelVon" id="field_preisstaffelVon"
+                           formControlName="preisstaffelVon"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.preisstaffelBis" for="field_preisstaffelBis">Preisstaffel Bis</label>
+                    <input type="text" class="form-control" name="preisstaffelBis" id="field_preisstaffelBis"
+                           formControlName="preisstaffelBis"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.eoq" for="field_eoq">Eoq</label>
+                    <input type="text" class="form-control" name="eoq" id="field_eoq"
+                           formControlName="eoq"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plcStatus" for="field_plcStatus">Plc Status</label>
+                    <input type="text" class="form-control" name="plcStatus" id="field_plcStatus"
+                           formControlName="plcStatus"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.plcGultigkeitsdatum" for="field_plcGultigkeitsdatum">Plc Gultigkeitsdatum</label>
+                    <input type="text" class="form-control" name="plcGultigkeitsdatum" id="field_plcGultigkeitsdatum"
+                           formControlName="plcGultigkeitsdatum"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.ersatzProdukt" for="field_ersatzProdukt">Ersatz Produkt</label>
+                    <input type="text" class="form-control" name="ersatzProdukt" id="field_ersatzProdukt"
+                           formControlName="ersatzProdukt"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.marketingProgramm" for="field_marketingProgramm">Marketing Programm</label>
+                    <input type="text" class="form-control" name="marketingProgramm" id="field_marketingProgramm"
+                           formControlName="marketingProgramm"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gewahrleistung" for="field_gewahrleistung">Gewahrleistung</label>
+                    <input type="text" class="form-control" name="gewahrleistung" id="field_gewahrleistung"
+                           formControlName="gewahrleistung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.classDescription" for="field_classDescription">Class Description</label>
+                    <input type="text" class="form-control" name="classDescription" id="field_classDescription"
+                           formControlName="classDescription"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.classCode" for="field_classCode">Class Code</label>
+                    <input type="text" class="form-control" name="classCode" id="field_classCode"
+                           formControlName="classCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktFamilienBeschreibung" for="field_produktFamilienBeschreibung">Produkt Familien Beschreibung</label>
+                    <input type="text" class="form-control" name="produktFamilienBeschreibung" id="field_produktFamilienBeschreibung"
+                           formControlName="produktFamilienBeschreibung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktFamilie" for="field_produktFamilie">Produkt Familie</label>
+                    <input type="text" class="form-control" name="produktFamilie" id="field_produktFamilie"
+                           formControlName="produktFamilie"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.serienBeschreibung" for="field_serienBeschreibung">Serien Beschreibung</label>
+                    <input type="text" class="form-control" name="serienBeschreibung" id="field_serienBeschreibung"
+                           formControlName="serienBeschreibung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.seriesCode" for="field_seriesCode">Series Code</label>
+                    <input type="text" class="form-control" name="seriesCode" id="field_seriesCode"
+                           formControlName="seriesCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.modellBeschreibung" for="field_modellBeschreibung">Modell Beschreibung</label>
+                    <input type="text" class="form-control" name="modellBeschreibung" id="field_modellBeschreibung"
+                           formControlName="modellBeschreibung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.modell" for="field_modell">Modell</label>
+                    <input type="text" class="form-control" name="modell" id="field_modell"
+                           formControlName="modell"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.standardLieferzeitDistributoren" for="field_standardLieferzeitDistributoren">Standard Lieferzeit Distributoren</label>
+                    <input type="text" class="form-control" name="standardLieferzeitDistributoren" id="field_standardLieferzeitDistributoren"
+                           formControlName="standardLieferzeitDistributoren"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.volumen" for="field_volumen">Volumen</label>
+                    <input type="text" class="form-control" name="volumen" id="field_volumen"
+                           formControlName="volumen"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.volumenEinheit" for="field_volumenEinheit">Volumen Einheit</label>
+                    <input type="text" class="form-control" name="volumenEinheit" id="field_volumenEinheit"
+                           formControlName="volumenEinheit"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.bruttogewichtProdukts" for="field_bruttogewichtProdukts">Bruttogewicht Produkts</label>
+                    <input type="text" class="form-control" name="bruttogewichtProdukts" id="field_bruttogewichtProdukts"
+                           formControlName="bruttogewichtProdukts"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.gewichtseinheit" for="field_gewichtseinheit">Gewichtseinheit</label>
+                    <input type="text" class="form-control" name="gewichtseinheit" id="field_gewichtseinheit"
+                           formControlName="gewichtseinheit"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.produktabmessungen" for="field_produktabmessungen">Produktabmessungen</label>
+                    <input type="text" class="form-control" name="produktabmessungen" id="field_produktabmessungen"
+                           formControlName="produktabmessungen"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.maSeinheit" for="field_maSeinheit">Ma Seinheit</label>
+                    <input type="text" class="form-control" name="maSeinheit" id="field_maSeinheit"
+                           formControlName="maSeinheit"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.eanCode" for="field_eanCode">Ean Code</label>
+                    <input type="text" class="form-control" name="eanCode" id="field_eanCode"
+                           formControlName="eanCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.serialisierungsKennung" for="field_serialisierungsKennung">Serialisierungs Kennung</label>
+                    <input type="text" class="form-control" name="serialisierungsKennung" id="field_serialisierungsKennung"
+                           formControlName="serialisierungsKennung"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.paNummer" for="field_paNummer">Pa Nummer</label>
+                    <input type="text" class="form-control" name="paNummer" id="field_paNummer"
+                           formControlName="paNummer"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.partnerName" for="field_partnerName">Partner Name</label>
+                    <input type="text" class="form-control" name="partnerName" id="field_partnerName"
+                           formControlName="partnerName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.partnerPro" for="field_partnerPro">Partner Pro</label>
+                    <input type="text" class="form-control" name="partnerPro" id="field_partnerPro"
+                           formControlName="partnerPro"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplication55App.hpeCatalogue.datumsUhrzeitstempel" for="field_datumsUhrzeitstempel">Datums Uhrzeitstempel</label>
+                    <input type="text" class="form-control" name="datumsUhrzeitstempel" id="field_datumsUhrzeitstempel"
+                           formControlName="datumsUhrzeitstempel"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

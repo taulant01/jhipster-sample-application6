@@ -1,0 +1,22 @@
+{
+  "jhipsterSampleApplication55App": {
+    "avmUser": {
+      "home": {
+        "title": "Avm Users",
+        "createLabel": "Create a new Avm User",
+        "createOrEditLabel": "Create or edit a Avm User",
+        "notFound": "No Avm Users found"
+      },
+      "created": "A new Avm User is created with identifier {{ param }}",
+      "updated": "A Avm User is updated with identifier {{ param }}",
+      "deleted": "A Avm User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Avm User {{ id }}?"
+      },
+      "detail": {
+        "title": "Avm User"
+      },
+      "copAccountDetails": "Cop Account Details"
+    }
+  }
+}
